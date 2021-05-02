@@ -1,7 +1,7 @@
 package com.doublesnatch.app.injector.module
 
 import android.content.Context
-import com.doublesnatch.app.SampleApplication
+import com.doublesnatch.app.CalculatorApplication
 import com.doublesnatch.data.network.gateway.IAppAuthGateway
 import com.doublesnatch.data.network.gateway.IAppGateway
 import com.doublesnatch.data.preferences.CredentialsPreferenceManager
@@ -97,7 +97,7 @@ object NetworkModule {
     @Provides
     @Named("Auth")
     fun provideAuthOkHttpClient(
-            application: SampleApplication,
+            application: CalculatorApplication,
             httpLoggingInterceptor: HttpLoggingInterceptor,
             httpCacheInterceptor: HttpCacheInterceptor,
             requestAuthInterceptor: RequestAuthInterceptor

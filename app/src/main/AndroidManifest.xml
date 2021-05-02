@@ -2,7 +2,7 @@
     package="com.doublesnatch.app">
 
     <application
-        android:name="com.doublesnatch.app.SampleApplication"
+        android:name="com.doublesnatch.app.CalculatorApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

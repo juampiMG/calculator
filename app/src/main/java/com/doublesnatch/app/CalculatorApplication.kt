@@ -11,7 +11,7 @@ import dagger.android.support.DaggerApplication
 import io.reactivex.Single
 import javax.inject.Inject
 
-class SampleApplication :  DaggerApplication(), HasActivityInjector, IRefreshAuthenticator {
+class CalculatorApplication : DaggerApplication(), HasActivityInjector, IRefreshAuthenticator {
 
     @Inject
     internal lateinit var activityInjector: DispatchingAndroidInjector<Activity>
@@ -20,8 +20,6 @@ class SampleApplication :  DaggerApplication(), HasActivityInjector, IRefreshAut
         super.onCreate()
         initCompatVector()
     }
-
-    // =============== HasActivityInjector =========================================================
 
     // =============== HasActivityInjector =========================================================
 

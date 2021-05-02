@@ -2,8 +2,7 @@ package com.doublesnatch.app.ui.basicSample.activity.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import com.doublesnatch.app.common.viewModel.BaseActivityViewModel
-import com.doublesnatch.app.helper.subscribeSingle
-import com.doublesnatch.domain.interactor.IGetSampleUseCase
+import com.doublesnatch.domain.interactor.sample.IGetSampleUseCase
 import javax.inject.Inject
 
 
@@ -17,20 +16,7 @@ constructor() : BaseActivityViewModel(), ISampleActivityViewModel {
     private var showToast = MutableLiveData<Boolean>()
 
     override fun loadServerGame() {
-        addDisposable(
-                mGetSampleUseCase.execute().subscribeSingle(
-                        onStart = {
-                            isLoading(true)
-                        },
-                        onSuccess = {
-                            isLoading(false)
-                            showToast.value = true
-                        },
-                        onError = { _, _, _ ->
-                            isLoading(false)
-                        }
-                )
-        )
+
     }
 
     override fun showToast(): MutableLiveData<Boolean> {

@@ -12,6 +12,8 @@ ext {
     androidxFragmentVersion = '1.3.0-alpha04'
     appCompatVersion = '1.2.0'               // https://developer.android.com/jetpack/androidx/releases/appcompat
     roomVersion = '2.2.6'
+    lifecycleVersion = '2.3.1'
+    rx2RoomVersion = '2.2.4'
 
     // Libraries
     reactiveAndroidVersion = '2.1.1'        // https://github.com/ReactiveX/RxAndroid
@@ -49,7 +51,8 @@ ext {
                             "androidx.constraintlayout:constraintlayout:$constraintsLayoutVersion",
                             "androidx.activity:activity-ktx:$androidxActivityVersion",
                             "androidx.fragment:fragment-ktx:$androidxFragmentVersion",
-
+                            "androidx.room:room-runtime:$roomVersion",
+                            "androidx.room:room-rxjava2:$rx2RoomVersion",
 
                             "com.google.dagger:dagger-android-support:$daggerVersion",
                             "androidx.lifecycle:lifecycle-extensions:$androidxLifecycleVersion",
@@ -86,7 +89,9 @@ ext {
                     kapt : [
                             "com.github.bumptech.glide:compiler:$glideVersion",
                             "com.google.dagger:dagger-compiler:$daggerVersion",
-                            "com.google.dagger:dagger-android-processor:$daggerVersion"
+                            "com.google.dagger:dagger-android-processor:$daggerVersion",
+                            "androidx.room:room-compiler:$roomVersion",
+                            "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
                     ]
             ],
             domain : [
@@ -126,6 +131,7 @@ ext {
                             "com.google.android.gms:play-services-gcm:$servicesVersion",
                             "com.google.dagger:dagger-android-support:$daggerVersion",
                             "androidx.room:room-runtime:$roomVersion",
+                            "androidx.room:room-rxjava2:$rx2RoomVersion",
                             
                             "com.squareup.retrofit2:retrofit:$retrofitVersion",
                             "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
@@ -151,7 +157,9 @@ ext {
                     ],
                     kapt : [
                             "com.google.dagger:dagger-compiler:$daggerVersion",
-                            "com.google.dagger:dagger-android-processor:$daggerVersion"
+                            "com.google.dagger:dagger-android-processor:$daggerVersion",
+                            "androidx.room:room-compiler:$roomVersion",
+                            "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
                     ]
             ]
     ]
