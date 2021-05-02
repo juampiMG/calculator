@@ -1,0 +1,53 @@
+# Signing credentials
+signing.properties
+
+# Retrolambda props
+#/app/retrolambda.properties
+
+# Gradle
+.gradle
+gradle/
+gradlew
+gradlew.bat
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*/.idea/
+*.iml
+/app/local.properties
+local.properties
+build/
+
+
+# Crashlytics
+#app/src/main/res/values/com_crashlytics_export_strings.xml
+#crashlytics-build.properties
+
+# Built application files
+*.apk
+*.ap_
+
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+/app/bin/
+/app/gen/
+/app/out/
+/data/bin/
+/data/gen/
+/data/out/
+/domain/bin/
+/domain/gen/
+/domain/out/
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+#/buildSystem/gymforless_upload.jks
