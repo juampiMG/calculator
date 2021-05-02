@@ -80,6 +80,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../data/build/generated/res/resValues/prod/debug" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../data/build/generated/source/kaptKotlin/prodDebugAndroidTest" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../data/build/generated/source/kaptKotlin/prodDebugUnitTest" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../data/src/main/res" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../data/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../data/build" />
     </content>

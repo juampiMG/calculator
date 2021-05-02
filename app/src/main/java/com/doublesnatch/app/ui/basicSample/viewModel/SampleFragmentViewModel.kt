@@ -4,6 +4,7 @@ import com.doublesnatch.app.common.viewModel.BaseFragmentViewModel
 import com.doublesnatch.app.helper.subscribeCompletable
 import com.doublesnatch.app.helper.subscribeSingle
 import com.doublesnatch.app.model.CompanyView
+import com.doublesnatch.app.model.TypeImpressionView
 import com.doublesnatch.app.model.mapper.CompanyViewMapper
 import com.doublesnatch.domain.interactor.company.IAddCompanyUseCase
 import com.doublesnatch.domain.interactor.company.IDeleteCompanyUseCase
@@ -74,6 +75,10 @@ constructor() : BaseFragmentViewModel(), ISampleFragmentViewModel {
         }?: run {
             setAlertDialogError("NOT FOUND with id = $id")
         }
+
+    }
+
+    override fun loadTypeImpression(typeImpressions: List<TypeImpressionView>) {
 
     }
 

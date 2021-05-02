@@ -51,3 +51,6 @@ build/
 # Android Studio Navigation editor temp files
 .navigation/
 #/buildSystem/gymforless_upload.jks
+
+#CSV
+/app/src/main/res/raw/*.csv

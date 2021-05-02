@@ -7,16 +7,16 @@ import com.doublesnatch.data.database.daos.DigitalImpressionDao
 import com.doublesnatch.data.database.daos.ProductDao
 import com.doublesnatch.data.database.daos.SerigraphyImpressionDao
 import com.doublesnatch.data.entity.Company
-import com.doublesnatch.data.entity.DigitalImpression
+import com.doublesnatch.data.entity.Impression
 import com.doublesnatch.data.entity.Product
-import com.doublesnatch.data.entity.SerigraphyImpression
+import com.doublesnatch.data.entity.TypeImpression
 
 
 @Database(entities = [
     (Company::class),
     (Product::class),
-    (DigitalImpression::class),
-    (SerigraphyImpression::class)],
+    (Impression::class),
+    (TypeImpression::class)],
         version = 1,
         exportSchema = true)
 abstract class AppDatabase() : RoomDatabase() {

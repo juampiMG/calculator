@@ -5,6 +5,9 @@ import com.doublesnatch.app.R
 import com.doublesnatch.app.common.view.BaseFragment
 import com.doublesnatch.app.common.view.IBaseFragmentCallback
 import com.doublesnatch.app.ui.basicSample.viewModel.SampleFragmentViewModel
+import com.doublesnatch.app.utils.CSVUtils.getImpressions
+import com.doublesnatch.app.utils.CSVUtils.getProducts
+import com.doublesnatch.app.utils.CSVUtils.getTypeImpressions
 import kotlinx.android.synthetic.main.sample_fragment.*
 
 /**
@@ -27,7 +30,8 @@ class SampleFragment : BaseFragment<SampleFragmentViewModel, SampleFragment.Frag
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-//            mViewModel.saveCompany()
+            getImpressions(mActivity)
+//            mViewModel.loadTypeImpression (getTypeImpressions(mActivity))
         }
     }
 

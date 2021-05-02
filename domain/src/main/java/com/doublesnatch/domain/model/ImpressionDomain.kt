@@ -1,14 +1,8 @@
 package com.doublesnatch.domain.model
 
 
-class ProductDomain constructor(
+class ImpressionDomain constructor(
         var id: Int = 0,
-        var name: String,
-        var reference: String,
-        var gender: String? = null,
-        var type: String? = null,
-        var detail: String? = null,
-        var url: String? = null,
         var priceTill10: Double,
         var priceTill25: Double,
         var priceTill50: Double,
@@ -18,5 +12,7 @@ class ProductDomain constructor(
         var priceTill200: Double,
         var priceTill250: Double,
         var priceTill500: Double,
-        var moreThan500: Double
+        var moreThan500: Double,
+        var idTypeImpression: Int,
+        var idCompany: Int
 )
