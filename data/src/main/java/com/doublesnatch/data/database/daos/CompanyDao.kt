@@ -6,7 +6,6 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.doublesnatch.data.entity.Company
 import io.reactivex.Completable
-import io.reactivex.Maybe
 import io.reactivex.Single
 
 @Dao
@@ -20,6 +19,9 @@ interface CompanyDao {
 
     @Query("SELECT * FROM Company WHERE id = :id")
     fun findByCompanyId(id: Int): Single<Company>
+
+    @Query("DELETE FROM Company")
+    fun deleteAll()
 
     @Insert
     fun insertAll(companies: List<Company>):Completable

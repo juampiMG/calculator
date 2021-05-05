@@ -16,7 +16,7 @@ import androidx.room.*
             childColumns = arrayOf("idTypeImpression"),
             onDelete = ForeignKey.CASCADE
     )
-], indices = [Index(value = ["id"])]
+], indices = [Index(value = ["idCompany", "idTypeImpression"])]
 )
 class Impression constructor(
         @PrimaryKey(autoGenerate = true) var id: Int = 0,

@@ -1,13 +1,13 @@
 package com.doublesnatch.app.injector.module
 
 import com.doublesnatch.data.repository.CompanyRepository
-import com.doublesnatch.data.repository.DigitalImpressionRepository
+import com.doublesnatch.data.repository.ImpressionRepository
 import com.doublesnatch.data.repository.ProductRepository
-import com.doublesnatch.data.repository.SerigraphyImpressionRepository
+import com.doublesnatch.data.repository.TypeImpressionRepository
 import com.doublesnatch.domain.repository.ICompanyRepository
-import com.doublesnatch.domain.repository.IDigitalImpressionRepository
+import com.doublesnatch.domain.repository.IImpressionRepository
 import com.doublesnatch.domain.repository.IProductRepository
-import com.doublesnatch.domain.repository.ISerigraphyImpressionRepository
+import com.doublesnatch.domain.repository.ITypeImpressionRepository
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
@@ -28,9 +28,9 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    internal abstract fun serigraphyImpressionRepository(repository: SerigraphyImpressionRepository): ISerigraphyImpressionRepository
+    internal abstract fun serigraphyImpressionRepository(repository: TypeImpressionRepository): ITypeImpressionRepository
 
     @Binds
     @Singleton
-    internal abstract fun digitalImpressionRepository(repository: DigitalImpressionRepository): IDigitalImpressionRepository
+    internal abstract fun digitalImpressionRepository(repository: ImpressionRepository): IImpressionRepository
 }

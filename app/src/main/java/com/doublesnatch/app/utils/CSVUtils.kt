@@ -26,11 +26,11 @@ object CSVUtils {
 
         try {
             reader.lines().forEach { line ->
-                Log.d("MyActivity", "Line: $line")
+//                Log.d("MyActivity", "Line: $line")
                 val tokens = line.split(",").toTypedArray()
                 val type = TypeImpressionView(type = tokens[0])
                 list.add(type)
-                Log.d("getTypeImpressions", "Just created: ")
+//                Log.d("getTypeImpressions", "Just created: ")
             }
         } catch (e: IOException) {
             e.printStackTrace()
@@ -42,18 +42,18 @@ object CSVUtils {
     @JvmStatic
     fun getCompanies(context: Context): List<CompanyView> {
         val list: MutableList<CompanyView> = mutableListOf()
-        val `is`: InputStream = context.resources.openRawResource(R.raw.type_impressions)
+        val `is`: InputStream = context.resources.openRawResource(R.raw.company)
         val reader = BufferedReader(
                 InputStreamReader(`is`, Charset.forName("UTF-8"))
         )
 
         try {
             reader.lines().forEach { line ->
-                Log.d("MyActivity", "Line: $line")
+//                Log.d("MyActivity", "Line: $line")
                 val tokens = line.split(",").toTypedArray()
                 val type = CompanyView(name = tokens[0])
                 list.add(type)
-                Log.d("getTypeImpressions", "Just created: ")
+//                Log.d("getTypeImpressions", "Just created: ")
             }
         } catch (e: IOException) {
             e.printStackTrace()
@@ -72,7 +72,7 @@ object CSVUtils {
 
         try {
             reader.lines().forEach { line ->
-                Log.d("MyActivity", "Line: $line")
+//                Log.d("MyActivity", "Line: $line")
                 val tokens = line.split(",").toTypedArray()
                 val type = ImpressionView(
                         priceTill10 = tokens[0].toDouble(),
@@ -89,7 +89,7 @@ object CSVUtils {
                         idCompany = tokens[11].toInt()
                 )
                 list.add(type)
-                Log.d("getTypeImpressions", "Just created: ")
+               // Log.d("getTypeImpressions", "Just created: ")
             }
         } catch (e: IOException) {
             e.printStackTrace()
@@ -109,7 +109,7 @@ object CSVUtils {
 
         try {
             reader.lines().forEach { line ->
-                Log.d("MyActivity", "Line: $line")
+//                Log.d("MyActivity", "Line: $line")
                 val tokens = line.split(",").toTypedArray()
                 val type = ProductView(
                         name = tokens[0],
@@ -130,7 +130,7 @@ object CSVUtils {
                         moreThan500 = tokens[15].toDouble()
                 )
                 list.add(type)
-                Log.d("getTypeImpressions", "Just created: ")
+//                Log.d("getTypeImpressions", "Just created: ")
             }
         } catch (e: IOException) {
             e.printStackTrace()

@@ -5,6 +5,7 @@ import com.doublesnatch.app.R
 import com.doublesnatch.app.common.view.BaseFragment
 import com.doublesnatch.app.common.view.IBaseFragmentCallback
 import com.doublesnatch.app.ui.basicSample.viewModel.SampleFragmentViewModel
+import com.doublesnatch.app.utils.CSVUtils.getCompanies
 import com.doublesnatch.app.utils.CSVUtils.getImpressions
 import com.doublesnatch.app.utils.CSVUtils.getProducts
 import com.doublesnatch.app.utils.CSVUtils.getTypeImpressions
@@ -30,8 +31,6 @@ class SampleFragment : BaseFragment<SampleFragmentViewModel, SampleFragment.Frag
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            getImpressions(mActivity)
-//            mViewModel.loadTypeImpression (getTypeImpressions(mActivity))
         }
     }
 
@@ -45,16 +44,49 @@ class SampleFragment : BaseFragment<SampleFragmentViewModel, SampleFragment.Frag
     }
 
     override fun setUpViews() {
+        add.setOnClickListener {
+            mViewModel.saveCompany()
+        }
         get.setOnClickListener {
-            mViewModel.getCompany(id_company.text.toString().toInt())
+            mViewModel.getAllTypes()
         }
 
         delete.setOnClickListener {
-            mViewModel.deleteCompany(id_company.text.toString().toInt())
+            mViewModel.getAllImpressions()
         }
 
         getall.setOnClickListener {
             mViewModel.getAllCompanies()
+        }
+
+        delete_all_companies.setOnClickListener {
+            mViewModel.getAllProducts()
+        }
+
+        add_all_data.setOnClickListener {
+            mViewModel.addAll(
+                    getCompanies(mActivity),
+                    getTypeImpressions(mActivity),
+                    getProducts(mActivity),
+                    getImpressions(mActivity)
+            )
+        }
+
+
+        add_companies.setOnClickListener {
+            mViewModel.addCompanies(getCompanies(mActivity))
+        }
+
+        add_impressions.setOnClickListener {
+            mViewModel.addImpressions(getImpressions(mActivity))
+        }
+
+        add_products.setOnClickListener {
+            mViewModel.addProducts(getProducts(mActivity))
+        }
+
+        add_types.setOnClickListener {
+            mViewModel.addTypeImpressions(getTypeImpressions(mActivity))
         }
     }
 

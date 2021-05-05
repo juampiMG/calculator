@@ -14,6 +14,10 @@ constructor(private val companyDao: CompanyDao) : ICompanyRepository {
     @Inject
     internal lateinit var mCompanyEntityMapper: CompanyEntityMapper
 
+    override fun deleteAll(): Completable {
+        companyDao.deleteAll()
+        return Completable.complete()
+    }
 
     override fun getCompany(id: Int): Single<CompanyDomain> {
         return companyDao.findByCompanyId(id).flatMap { resultEntities -> Single.just((mCompanyEntityMapper.transform(resultEntities))) }
@@ -29,5 +33,9 @@ constructor(private val companyDao: CompanyDao) : ICompanyRepository {
 
     override fun getAllCompanies(): Single<List<CompanyDomain>> {
         return companyDao.all.flatMap { resultEntities -> Single.just((mCompanyEntityMapper.transform(resultEntities))) }
+    }
+
+    override fun addCompanyList(companies: List<CompanyDomain>): Completable {
+        return companyDao.insertAll(companies = mCompanyEntityMapper.inverseTransform(companies))
     }
 }

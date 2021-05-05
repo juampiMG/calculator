@@ -11,6 +11,9 @@ import io.reactivex.Single
 @Dao
 interface ProductDao {
 
+    @Query("DELETE FROM Product")
+    fun deleteAll()
+
     @get:Query("SELECT * FROM Product")
     val all: Single<List<Product>>
 
