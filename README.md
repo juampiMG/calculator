@@ -15,3 +15,5 @@ RxKotlin 2
 LiveData
 
 Lottie
+
+Room
